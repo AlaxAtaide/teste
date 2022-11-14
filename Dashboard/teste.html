@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Analytics GEPEF</title>
+</head>
+<body>
+    <h1>Dashboard Analytics GEPEF</h1>
+
+    <canvas class="line-chart"></canvas>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+
+    <!-- CTX(Context) preciso definir um contexto pelo uso da tag canvas --> 
+
+    <!-- a variável pega pra mim todos os elementos que tem o nome de classe igual a "Line-chart" 
+        (que foi declarado na tag canvas)--> 
+    <script>
+        var ctx = document.getElementsByClassName("line-chart");
+
+        // Type(Tipo de Gráfico), Data(Dado que a gente vai passar pode ser Json, Array, Object..)  e Options (Configurações globais do gráfico)
+
+        // new chart, objeto para inicializar o nosso chart.js 
+        var chartGraph = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
+            }
+        });
+
+    </script>
+
+    
+</body>
+</html>

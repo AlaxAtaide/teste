@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="style/apexcharts.min.js"></script>
+
+    <title>Dashboard Analytics GEPEF</title>
+</head>
+<body>
+
+    <h1>Dashboard Analytics GEPEF</h1>
+
+
+    <section class="container">
+
+        <h2>Evolução // Gepef - Negocial</h2>
+
+    <div id="myChart"></div>
+    
+
+    <!-- CTX(Context) preciso definir um contexto pelo uso da tag canvas --> 
+
+    <!-- a variável pega pra mim todos os elementos que tem o nome de classe igual a "Line-chart" 
+        (que foi declarado na tag canvas)--> 
+        
+<div class="DASH2">
+
+    <script>
+        // elemento div sendo capturado pelo js
+
+        let elemento = document.getElementById('myChart');
+        let options = {
+            chart: {
+            type: 'bar'
+            },
+            //conjunto de dados que vão ser apresentados no gráfico
+            series: [
+                {
+                    name: 'Evolução',
+                    data: [80,90,100,202]
+                }
+            ],
+            stroke: {
+                curve: 'smooth',
+                labels: ['07/11/2022', '08/11/2022', '09/11/2022', '10/11/2022'],
+            }
+
+            
+
+        };
+
+        let = chart = new  ApexCharts(elemento, options);
+        chart.render(); 
+
+
+     </script>
+
+</div>
+
+<div id="grafico"></div>
+
+<div class="DASH3">
+
+    <script>
+        // elemento div sendo capturado pelo js
+
+        let elemento1 = document.getElementById('grafico');
+        let options2 = {
+            chart: {
+            type: 'line'
+            },
+            //conjunto de dados que vão ser apresentados no gráfico
+            series: [
+                {
+                    name: 'Evolução',
+                    data: [20,30,40,50]
+                }
+            ],
+            xaxis:{
+               categories: ['07/11/2022', '08/11/2022', '09/11/2022', '10/11/2022']
+            },
+            stroke: {
+                curve: 'smooth',
+
+            }
+
+            
+
+        };
+
+        let = chart = new  ApexCharts(elemento1, options2);
+        chart.render(); 
+
+
+     </script>
+
+</div>
+       
+
+</section>
+
+</body>
+</html>
